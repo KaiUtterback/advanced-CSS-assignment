@@ -1,4 +1,4 @@
-// scripts.js
+
 
 let clickCount = 0;
 let isDragging = false;
