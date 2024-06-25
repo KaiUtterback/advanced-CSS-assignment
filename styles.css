@@ -1,31 +1,46 @@
-/* styles.css */
+
+/* General body styling for a professional look */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
 /* Task 1: Apply RGBA Background Colors */
 .background-fade {
-    background-color: rgba(0, 0, 255, 0.5); /* Semi-transparent blue */
-    padding: 20px;
+    background-color: rgba(0, 123, 255, 0.3); /* Semi-transparent blue */
+    padding: 40px;
     text-align: center;
-    margin: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Task 2: Enhance Text Visibility with RGBA */
 .enhanced-text {
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle black shadow */
-    font-size: 2em;
+    color: #333;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Subtle black shadow */
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 /* Task 3: Interactive Buttons with RGBA Hover Effects */
 .interactive-button {
-    background-color: rgba(255, 0, 0, 0.8); /* Solid semi-transparent red */
+    background-color: rgba(255, 99, 71, 0.8); /* Solid semi-transparent tomato */
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     color: white;
     font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .interactive-button:hover {
-    background-color: rgba(0, 255, 0, 0.8); /* Change to semi-transparent green on hover */
+    background-color: rgba(60, 179, 113, 0.8); /* Change to semi-transparent medium sea green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
 }

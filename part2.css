@@ -1,0 +1,60 @@
+
+/* General body styling for a professional look */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Task 1: Smooth Hover Transition for Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Task 2: Animated Button on Click */
+.interactive-button {
+    background-color: rgba(255, 99, 71, 0.8); /* Solid semi-transparent tomato */
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.interactive-button:active {
+    transform: scale(1.1);
+}
+
+/* Task 3: Continuous Rotation Animation for an Icon */
+.rotating-icon img {
+    width: 100px;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
