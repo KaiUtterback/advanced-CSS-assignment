@@ -1,3 +1,4 @@
+/* styles.css */
 
 /* General body styling for a professional look */
 body {
@@ -84,7 +85,7 @@ a:hover {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    cursor: grab;
+    transition: transform 0.3s ease;
 }
 
 .face {
