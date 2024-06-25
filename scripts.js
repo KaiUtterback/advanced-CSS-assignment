@@ -1,6 +1,9 @@
 // scripts.js
 
 let clickCount = 0;
+let isDragging = false;
+let lastX, lastY;
+let cubeRotationX = 0, cubeRotationY = 0;
 
 function incrementCounter() {
     clickCount++;
@@ -9,8 +12,27 @@ function incrementCounter() {
 
 const cube = document.getElementById('cube');
 
+cube.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    cube.style.cursor = 'grabbing';
+    e.preventDefault();
+});
+
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+    cube.style.cursor = 'grab';
+});
+
 document.addEventListener('mousemove', (e) => {
-    const x = e.clientX / window.innerWidth - 0.5;
-    const y = e.clientY / window.innerHeight - 0.5;
-    cube.style.transform = `rotateX(${y * 360}deg) rotateY(${x * 360}deg)`;
+    if (isDragging) {
+        const deltaX = e.clientX - lastX;
+        const deltaY = e.clientY - lastY;
+        cubeRotationX += deltaY * 0.5;
+        cubeRotationY += deltaX * 0.5;
+        cube.style.transform = `rotateX(${cubeRotationX}deg) rotateY(${cubeRotationY}deg)`;
+        lastX = e.clientX;
+        lastY = e.clientY;
+    }
 });

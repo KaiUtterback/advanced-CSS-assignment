@@ -1,3 +1,5 @@
+/* styles.css */
+
 /* General body styling for a professional look */
 body {
     font-family: 'Arial', sans-serif;
@@ -63,6 +65,13 @@ a:hover {
     margin-top: 10px;
 }
 
+/* Drag prompt styling */
+.drag-prompt {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #555;
+}
+
 /* Task 3: Continuous Rotation Animation for an Icon */
 .rotating-cube-container {
     perspective: 1000px;
@@ -77,6 +86,7 @@ a:hover {
     position: relative;
     transform-style: preserve-3d;
     animation: rotate-cube 10s linear infinite;
+    cursor: grab;
 }
 
 .face {
