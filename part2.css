@@ -1,3 +1,4 @@
+/* styles.css */
 
 /* General body styling for a professional look */
 body {
@@ -13,41 +14,60 @@ body {
 /* Container styling */
 .container {
     text-align: center;
-    padding: 20px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced text styling */
+.enhanced-text {
+    color: #333;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle black shadow */
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 /* Task 1: Smooth Hover Transition for Links */
 a {
     color: #007bff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 a:hover {
     color: #0056b3;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Task 2: Animated Button on Click */
 .interactive-button {
-    background-color: rgba(255, 99, 71, 0.8); /* Solid semi-transparent tomato */
+    background-color: rgba(255, 99, 71, 0.9); /* Solid semi-transparent tomato */
     border: none;
     padding: 12px 24px;
     color: white;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .interactive-button:active {
     transform: scale(1.1);
+    background-color: rgba(255, 99, 71, 1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Task 3: Continuous Rotation Animation for an Icon */
 .rotating-icon img {
     width: 100px;
     animation: rotate 5s linear infinite;
+    transition: transform 0.3s ease;
+}
+
+.rotating-icon img:hover {
+    transform: scale(1.1);
 }
 
 @keyframes rotate {
