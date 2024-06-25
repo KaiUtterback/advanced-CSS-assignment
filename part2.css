@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* General body styling for a professional look */
 body {
     font-family: 'Arial', sans-serif;
@@ -59,22 +57,49 @@ a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Click count styling */
+.click-count {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
 /* Task 3: Continuous Rotation Animation for an Icon */
-.rotating-icon img {
-    width: 100px;
-    animation: rotate 5s linear infinite;
-    transition: transform 0.3s ease;
+.rotating-cube-container {
+    perspective: 1000px;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
 }
 
-.rotating-icon img:hover {
-    transform: scale(1.1);
+.rotating-cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate-cube 10s linear infinite;
 }
 
-@keyframes rotate {
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0.7);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.front  { transform: translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.right  { transform: rotateY(90deg) translateZ(100px); }
+.top    { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes rotate-cube {
     from {
-        transform: rotate(0deg);
+        transform: rotateX(0deg) rotateY(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotateX(360deg) rotateY(360deg);
     }
 }
